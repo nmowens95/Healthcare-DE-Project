@@ -1,14 +1,7 @@
 import requests
 import pandas as pd
-# from config.logging_config import config_logging
+from config.bootstrap import config_logging #, configure_project_root
 import logging
-
-def config_logging():
-    logging.basicConfig(
-        format='%(asctime)s - %(levelname)s - %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S',
-        level=logging.DEBUG
-    )
 
 config_logging()
 
@@ -34,3 +27,4 @@ def extract():
 # Check data exists
 df = extract()
 print(df)
+# python -m etl.extract, need to run as modules
