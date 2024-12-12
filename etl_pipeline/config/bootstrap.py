@@ -10,8 +10,21 @@ import os
 #         sys.path.insert(0, project_root)
 
 def config_logging():
+    if not os.path.exists('logs'):
+        os.makedirs('logs')
+
+    for handler in logging.root.handlers[:]:
+        logging.root.removeHandler(handler)
+
     logging.basicConfig(
+        filename='logs/etl.log',
         format='%(asctime)s - %(levelname)s - %(message)s',
         datefmt='%Y-%m-%d %H:%M:%S',
         level=logging.DEBUG
     )
+
+    # Add console handler to see logs in terminal as well
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', '%Y-%m-%d %H:%M:%S'))
+    console_handler.setLevel(logging.DEBUG)
+    logging.getLogger().addHandler(console_handler)
