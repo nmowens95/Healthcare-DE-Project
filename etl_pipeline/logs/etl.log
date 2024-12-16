@@ -17,3 +17,15 @@
 2024-12-10 21:03:34 - INFO - Dataframe initial shape: (100, 4)
 2024-12-10 21:03:34 - INFO - Dataframe updated shape: (100, 5)
 2024-12-10 21:03:34 - INFO - Data transformed successfully
+2024-12-15 23:08:31 - INFO - Starting data extraction...
+2024-12-15 23:08:31 - DEBUG - Starting new HTTPS connection (1): jsonplaceholder.typicode.com:443
+2024-12-15 23:08:32 - DEBUG - https://jsonplaceholder.typicode.com:443 "GET /posts HTTP/11" 200 None
+2024-12-15 23:08:32 - INFO - Data extraction completed successfully
+2024-12-15 23:08:46 - INFO - Starting data extraction...
+2024-12-15 23:08:46 - DEBUG - Starting new HTTPS connection (1): jsonplaceholder.typicode.com:443
+2024-12-15 23:08:46 - DEBUG - https://jsonplaceholder.typicode.com:443 "GET /posts HTTP/11" 200 None
+2024-12-15 23:08:46 - INFO - Data extraction completed successfully
+2024-12-15 23:08:46 - INFO - Starting transformation...
+2024-12-15 23:08:46 - INFO - Dataframe initial shape: (100, 4)
+2024-12-15 23:08:46 - INFO - Dataframe updated shape: (100, 5)
+2024-12-15 23:08:46 - INFO - Data transformed successfully
